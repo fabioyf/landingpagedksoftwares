@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="A DEKA SOFTWARES cria sites, softwares e sistemas sob medida para transformar ideias em soluções digitais.">
+  <title>DEKA SOFTWARES | Soluções digitais</title>
+  <style>
+    :root{--bg:#08090c;--panel:#111318;--muted:#a1a1aa;--white:#f7f7f8;--line:#24262d;--accent:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{height:82px;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .brand{font-size:23px;font-weight:900;letter-spacing:2px}.brand span{display:block;font-size:9px;letter-spacing:5px;color:var(--muted);font-weight:600;margin-top:-5px}
+    .navlinks{display:flex;gap:28px;color:#c4c4ca;font-size:13px}.navlinks a:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:9px;font-size:13px;font-weight:750;transition:.2s}
+    .btn-light{background:#fff;color:#08090c}.btn-light:hover{background:#dedee2;transform:translateY(-2px)}
+    .btn-outline{border:1px solid #3a3c44;color:#fff}.btn-outline:hover{background:#17191f}
+    .hero{padding:105px 0 95px;text-align:center;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:#fff;opacity:.045;filter:blur(110px);left:50%;top:-280px;transform:translateX(-50%);pointer-events:none}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #30323a;border-radius:100px;padding:7px 13px;color:#c8c8ce;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+    .dot{width:6px;height:6px;background:#fff;border-radius:50%}
+    h1{font-size:clamp(42px,7vw,76px);line-height:1.04;letter-spacing:-3px;margin:25px auto 20px;max-width:850px}
+    h1 em{font-style:normal;color:#858791}
+    .lead{max-width:620px;margin:0 auto;color:var(--muted);font-size:16px}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .mini{margin-top:27px;color:#777984;font-size:11px;letter-spacing:.5px}
+    section{padding:78px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 38px}
+    .kicker{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#92949e;font-weight:700}
+    h2{font-size:clamp(29px,4vw,42px);letter-spacing:-1.5px;line-height:1.15;margin:10px 0 12px}
+    .section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .card{background:linear-gradient(145deg,#15171d,#0e1014);border:1px solid var(--line);border-radius:15px;padding:25px;min-height:220px}
+    .icon{width:42px;height:42px;border:1px solid #343741;border-radius:11px;display:grid;place-items:center;font-size:19px;margin-bottom:23px}
+    .card h3{font-size:18px;margin:0 0 8px}.card p{font-size:13px;color:var(--muted);margin:0}
+    .about{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0c0e12}
+    .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-copy p{color:var(--muted);font-size:14px}
+    .points{display:grid;gap:12px;margin-top:22px}.point{display:flex;gap:11px;align-items:center;color:#d7d7dc;font-size:13px}
+    .check{width:22px;height:22px;border:1px solid #444751;border-radius:50%;display:grid;place-items:center;font-size:11px}
+    .statement{border:1px solid #292c34;border-radius:17px;padding:34px;background:linear-gradient(140deg,#171a21,#0c0e12)}
+    .statement strong{font-size:clamp(25px,3vw,37px);line-height:1.2;letter-spacing:-1px;display:block}
+    .statement span{display:block;color:#888b95;font-size:12px;margin-top:17px}
+    .contact{text-align:center}.contact-box{border:1px solid #30323a;border-radius:18px;padding:48px 25px;background:radial-gradient(ellipse at top,#1a1c22,#0c0e12 70%)}
+    .contact-box p{color:var(--muted);max-width:520px;margin:0 auto}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:#777984;font-size:11px}
+    .foot{display:flex;justify-content:space-between;gap:15px;align-items:center}.social{display:flex;gap:18px;color:#c5c5cb}
+    @media(max-width:760px){.navlinks{display:none}.hero{padding:78px 0 70px}h1{letter-spacing:-2px}.grid{grid-template-columns:1fr}.card{min-height:auto}.about-inner{grid-template-columns:1fr;gap:28px}section{padding:60px 0}.contact-box{padding:38px 20px}.foot{flex-direction:column;text-align:center}}
+
+    /* Motion design: subtle, polished and accessible */
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(8,9,12,.82); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: background .3s ease, border-color .3s ease; }
+    .brand { transition: opacity .25s ease, letter-spacing .25s ease; }
+    .brand:hover { opacity: .82; letter-spacing: 2.6px; }
+    .hero:before { animation: glow-drift 12s ease-in-out infinite alternate; }
+    .eyebrow { animation: fade-up .8s .05s both; }
+    h1 { animation: fade-up .85s .16s both; }
+    .lead { animation: fade-up .85s .28s both; }
+    .hero .actions { animation: fade-up .85s .4s both; }
+    .mini { animation: fade-up .85s .52s both; }
+    .btn { position: relative; overflow: hidden; }
+    .btn:after { content:""; position:absolute; inset:0; background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.22) 48%,transparent 70%); transform:translateX(-130%); transition:transform .65s ease; pointer-events:none; }
+    .btn:hover:after { transform:translateX(130%); }
+    .card { position:relative; overflow:hidden; transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s ease, background .35s ease, box-shadow .35s ease; }
+    .card:before { content:""; position:absolute; width:190px; height:190px; border-radius:50%; right:-110px; top:-115px; background:#fff; opacity:0; filter:blur(55px); transition:opacity .4s ease; }
+    .card:hover { transform:translateY(-7px); border-color:#555964; box-shadow:0 18px 45px rgba(0,0,0,.24); }
+    .card:hover:before { opacity:.10; }
+    .card .icon { transition:transform .35s ease, background .35s ease, border-color .35s ease; }
+    .card:hover .icon { transform:translateY(-3px) scale(1.06); background:#20232b; border-color:#626672; }
+    .statement { transition:transform .4s ease, border-color .4s ease; }
+    .statement:hover { transform:translateY(-4px); border-color:#50535e; }
+    .social a { transition:color .2s ease; }
+    .social a:hover { color:#fff; }
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.75,.25,1); }
+    .reveal.is-visible { opacity:1; transform:translateY(0); }
+    .grid .card:nth-child(2) { transition-delay:.10s; }
+    .grid .card:nth-child(3) { transition-delay:.20s; }
+    .point { transition:transform .25s ease, color .25s ease; }
+    .point:hover { transform:translateX(4px); color:#fff; }
+    .check { transition:background .25s ease, border-color .25s ease; }
+    .point:hover .check { background:#fff; color:#08090c; border-color:#fff; }
+    @keyframes fade-up { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes glow-drift { from { transform:translateX(-54%) scale(.92); opacity:.035; } to { transform:translateX(-46%) scale(1.12); opacity:.07; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+      .reveal { opacity:1; transform:none; }
+    }
+
+
+    .examples-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .example-card{background:#101217;border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+    .example-card:hover{transform:translateY(-6px);border-color:#555964;box-shadow:0 18px 45px rgba(0,0,0,.25)}
+    .mockup{height:180px;padding:15px;background:linear-gradient(145deg,#1b1e26,#101217);display:flex;align-items:center;justify-content:center}
+    .browser{width:100%;max-width:290px;border:1px solid #414550;border-radius:9px;overflow:hidden;background:#f3f4f6;color:#16181d;box-shadow:0 12px 28px rgba(0,0,0,.25)}
+    .browser-top{height:17px;background:#dfe1e5;display:flex;align-items:center;gap:4px;padding:0 7px}
+    .browser-top i{width:5px;height:5px;border-radius:50%;background:#9a9da5}
+    .site-preview{padding:12px 13px;height:120px;background:linear-gradient(120deg,#f8fafc,#e8ebf0)}
+    .site-logo{font-size:7px;font-weight:900;letter-spacing:1px}
+    .site-headline{font-size:15px;line-height:1.05;font-weight:900;margin-top:15px;max-width:145px}
+    .site-sub{font-size:6px;color:#555;margin-top:5px}
+    .site-cta{display:inline-block;background:#17191f;color:white;padding:4px 8px;border-radius:3px;font-size:6px;margin-top:8px}
+    .dashboard{width:100%;max-width:290px;height:137px;background:#f4f5f7;border-radius:9px;display:grid;grid-template-columns:55px 1fr;overflow:hidden;color:#16181d;box-shadow:0 12px 28px rgba(0,0,0,.25)}
+    .dash-side{background:#171a21;padding:10px 7px;color:#fff;font-size:6px;line-height:2.7}
+    .dash-main{padding:10px}.dash-title{font-size:9px;font-weight:800}.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:9px}
+    .dash-stat{background:#fff;border:1px solid #e3e5e9;border-radius:4px;padding:6px 4px;font-size:5px;color:#686b73}.dash-stat b{display:block;color:#15171c;font-size:10px}
+    .dash-chart{height:39px;background:linear-gradient(165deg,transparent 40%,#c8cdd6 41%,transparent 43%),linear-gradient(15deg,transparent 55%,#9299a7 56%,transparent 58%);border-bottom:1px solid #d7d9df;margin-top:8px}
+    .mobile-preview{width:76px;height:145px;border:4px solid #343943;border-radius:16px;background:#f5f6f8;color:#17191f;padding:12px 7px;box-shadow:0 12px 28px rgba(0,0,0,.25)}
+    .mobile-notch{width:25px;height:4px;border-radius:5px;background:#343943;margin:-8px auto 12px}
+    .mobile-brand{font-size:6px;font-weight:900}.mobile-title{font-size:10px;font-weight:900;line-height:1.1;margin-top:17px}.mobile-line{height:4px;background:#d7dbe2;border-radius:4px;margin-top:6px}.mobile-button{height:13px;background:#17191f;border-radius:3px;margin-top:10px}
+    .example-info{padding:18px}.example-tag{font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:#9da1ac;font-weight:800}.example-info h3{font-size:16px;margin:7px 0 5px}.example-info p{font-size:12px;color:var(--muted);margin:0}
+    .example-note{font-size:11px;color:#858994;text-align:center;margin:20px auto 0}
+    @media(max-width:760px){.examples-grid{grid-template-columns:1fr}.mockup{height:170px}}
+
+
+    /* Camada extra de movimento: elegante, sem exageros */
+    .scroll-progress{position:fixed;top:0;left:0;width:100%;height:2px;z-index:100;background:rgba(255,255,255,.08);pointer-events:none}
+    .scroll-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,#777,#fff);box-shadow:0 0 12px rgba(255,255,255,.55);transform-origin:left}
+    .hero{isolation:isolate}
+    .hero:after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+    .dot{box-shadow:0 0 0 0 rgba(255,255,255,.55);animation:dot-pulse 2.2s infinite}
+    .eyebrow{transition:border-color .3s ease,background .3s ease}
+    .eyebrow:hover{border-color:#666;background:rgba(255,255,255,.04)}
+    .navlinks a{position:relative;transition:color .25s ease}
+    .navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:#fff;transition:right .25s ease}
+    .navlinks a:hover:after{right:0}
+    .example-card{transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .35s ease,box-shadow .35s ease}
+    .example-card:hover{transform:translateY(-8px) scale(1.012);box-shadow:0 22px 55px rgba(0,0,0,.34)}
+    .mockup{overflow:hidden;position:relative}
+    .browser,.dashboard,.mobile-preview{transition:transform .55s cubic-bezier(.2,.8,.2,1),box-shadow .55s ease}
+    .example-card:hover .browser{transform:translateY(-4px) scale(1.035)}
+    .example-card:hover .dashboard{transform:translateY(-3px) scale(1.025)}
+    .example-card:hover .mobile-preview{transform:translateY(-5px) rotate(-2deg)}
+    .example-tag{transition:letter-spacing .3s ease}
+    .example-card:hover .example-tag{letter-spacing:.8px}
+    .icon{transition:transform .4s cubic-bezier(.2,.8,.2,1),background .3s ease,border-color .3s ease}
+    .card:hover .icon{transform:translateY(-3px) rotate(-7deg);background:#20232b;border-color:#666}
+    .point{transition:transform .3s ease,color .3s ease}
+    .point:hover{transform:translateX(6px);color:#fff}
+    .check{transition:transform .3s ease,background .3s ease}
+    .point:hover .check{transform:scale(1.12);background:#fff;color:#08090c}
+    .statement{transition:transform .4s ease,border-color .4s ease}
+    .statement:hover{transform:translateY(-5px);border-color:#555964}
+    .contact-box{position:relative;overflow:hidden;transition:border-color .4s ease,transform .4s ease}
+    .contact-box:before{content:"";position:absolute;width:360px;height:220px;left:50%;top:-190px;transform:translateX(-50%);background:#fff;opacity:.08;filter:blur(80px);pointer-events:none;transition:opacity .5s ease}
+    .contact-box:hover{border-color:#555964}
+    .contact-box:hover:before{opacity:.15}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.25,1)}
+    .reveal.is-visible{opacity:1;transform:translateY(0)}
+    .examples-grid .example-card:nth-child(2){transition-delay:.10s}
+    .examples-grid .example-card:nth-child(3){transition-delay:.20s}
+    @keyframes dot-pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.45)}70%{box-shadow:0 0 0 7px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+      .reveal{opacity:1;transform:none}
+    }
+
+  </style>
+</head>
+<body>
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">DEKA<span>SOFTWARES</span></a>
+    <nav class="navlinks"><a href="#solucoes">Soluções</a><a href="#exemplos">Exemplos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+    <a class="btn btn-outline" href="https://wa.me/5513996505894?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20DEKA%20SOFTWARES." target="_blank" rel="noopener">Fale conosco ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span> Tecnologia & inovação</div>
+      <h1>Transformamos ideias em <em>soluções digitais.</em></h1>
+      <p class="lead">Criamos sites, softwares e sistemas pensados para simplificar processos, fortalecer marcas e ajudar negócios a evoluir.</p>
+      <div class="actions">
+        <a class="btn btn-light" href="https://wa.me/5513996505894?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20as%20solu%C3%A7%C3%B5es%20da%20DEKA." target="_blank" rel="noopener">Solicitar orçamento ↗</a>
+        <a class="btn btn-outline" href="#solucoes">Explorar soluções</a>
+      </div>
+      <div class="mini">SITES &nbsp;·&nbsp; SOFTWARES &nbsp;·&nbsp; SISTEMAS</div>
+    </div>
+  </section>
+
+  <section id="solucoes">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">O que fazemos</div>
+        <h2>Tecnologia para tirar seus planos do papel.</h2>
+        <p>Da presença online à ferramenta que otimiza seu negócio, desenvolvemos soluções digitais sob medida.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="icon">⌘</div><h3>Criação de sites</h3><p>Sites institucionais, landing pages e páginas profissionais para apresentar sua marca e atrair clientes.</p></article>
+        <article class="card"><div class="icon">▦</div><h3>Softwares e sistemas</h3><p>Plataformas e sistemas personalizados para organizar tarefas, facilitar rotinas e apoiar a gestão.</p></article>
+        <article class="card"><div class="icon">✳</div><h3>Soluções digitais</h3><p>Ideias transformadas em experiências digitais funcionais, com foco em praticidade e eficiência.</p></article>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="exemplos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Veja na prática</div>
+        <h2>Exemplos do que podemos criar.</h2>
+        <p>Algumas ideias de projetos que a DEKA pode desenvolver e adaptar à necessidade de cada cliente.</p>
+      </div>
+      <div class="examples-grid">
+        <article class="example-card">
+          <div class="mockup">
+            <div class="browser">
+              <div class="browser-top"><i></i><i></i><i></i></div>
+              <div class="site-preview">
+                <div class="site-logo">SUA MARCA</div>
+                <div class="site-headline">Sua empresa merece presença digital.</div>
+                <div class="site-sub">Apresente seus serviços de forma profissional.</div>
+                <span class="site-cta">Saiba mais</span>
+              </div>
+            </div>
+          </div>
+          <div class="example-info"><div class="example-tag">Exemplo • Sites</div><h3>Site institucional</h3><p>Uma página para apresentar sua empresa, mostrar serviços e facilitar o contato de novos clientes.</p></div>
+        </article>
+        <article class="example-card">
+          <div class="mockup">
+            <div class="dashboard">
+              <div class="dash-side">DEKA<br>Início<br>Clientes<br>Relatórios<br>Config.</div>
+              <div class="dash-main"><div class="dash-title">Painel de gestão</div><div class="dash-stats"><div class="dash-stat">Clientes<b>128</b></div><div class="dash-stat">Pedidos<b>46</b></div><div class="dash-stat">Tarefas<b>12</b></div></div><div class="dash-chart"></div></div>
+            </div>
+          </div>
+          <div class="example-info"><div class="example-tag">Exemplo • Sistemas</div><h3>Sistema de gestão</h3><p>Um painel para organizar clientes, pedidos, agendamentos e informações importantes do negócio.</p></div>
+        </article>
+        <article class="example-card">
+          <div class="mockup">
+            <div class="mobile-preview">
+              <div class="mobile-notch"></div><div class="mobile-brand">DEKA APP</div>
+              <div class="mobile-title">Tudo mais simples, em um só lugar.</div>
+              <div class="mobile-line"></div><div class="mobile-line" style="width:75%"></div><div class="mobile-button"></div>
+            </div>
+          </div>
+          <div class="example-info"><div class="example-tag">Exemplo • Soluções digitais</div><h3>Aplicativo ou plataforma</h3><p>Uma experiência digital para conectar sua empresa aos clientes e simplificar tarefas do dia a dia.</p></div>
+        </article>
+      </div>
+      <p class="example-note">Os visuais acima são demonstrações ilustrativas, não projetos de clientes já realizados.</p>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="wrap about-inner">
+      <div class="about-copy">
+        <div class="kicker">Sobre a DEKA</div>
+        <h2>Mais que tecnologia. Soluções que fazem sentido.</h2>
+        <p>A DEKA SOFTWARES trabalha para aproximar pessoas e negócios da tecnologia. Cada projeto começa entendendo sua necessidade e buscando a solução digital mais adequada.</p>
+        <div class="points">
+          <div class="point"><span class="check">✓</span> Projetos alinhados à sua necessidade</div>
+          <div class="point"><span class="check">✓</span> Design moderno e experiência intuitiva</div>
+          <div class="point"><span class="check">✓</span> Comunicação direta durante o projeto</div>
+        </div>
+      </div>
+      <div class="statement"><strong>Seu próximo projeto digital começa com uma boa conversa.</strong><span>Conte sua ideia. Vamos pensar na solução.</span></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap">
+      <div class="contact-box">
+        <div class="kicker">Vamos conversar?</div>
+        <h2>Tem uma ideia? Vamos transformar em realidade.</h2>
+        <p>Chame a DEKA SOFTWARES e conte o que você precisa. Estamos prontos para conhecer seu projeto.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="https://wa.me/5513996505894?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">WhatsApp ↗</a>
+          <a class="btn btn-outline" href="https://www.instagram.com/dekasoftwares/" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 DEKA SOFTWARES. Todos os direitos reservados.</div>
+    <div class="social"><a href="https://www.instagram.com/dekasoftwares/" target="_blank" rel="noopener">@dekasoftwares</a><a href="https://wa.me/5513996505894" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+</footer>
+
+<script>
+  // Reveal sections gently as they enter the viewport.
+  (function () {
+    const targets = document.querySelectorAll(
+      '.section-head, .card, .example-card, .about-copy, .statement, .contact-box, footer .foot'
+    );
+    targets.forEach((el) => el.classList.add('reveal'));
+
+    if (!('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      targets.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -35px 0px' });
+
+    targets.forEach((el) => observer.observe(el));
+  })();
+
+  // Barra de progresso da leitura, atualizada de forma leve.
+  (function () {
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+    let ticking = false;
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? (window.scrollY / max) * 100 : 0;
+      bar.style.width = progress + '%';
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    update();
+  })();
+</script>
+
+</body>
+</html>
